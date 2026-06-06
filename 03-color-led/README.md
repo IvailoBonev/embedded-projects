@@ -32,7 +32,7 @@ The lamp continuously reads three photoresistors (one per color channel — R, G
 
 ## Components
 
-| Component | Quantity | Notes |
+| Component | Notes |
 |---|---|---|
 | Arduino Uno | Main microcontroller |
 | RGB LED (common cathode, 4-leg) | Red, Green, Blue channels |
