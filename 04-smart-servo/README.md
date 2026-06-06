@@ -5,7 +5,7 @@ An Arduino Uno project that combines multiple input methods — IR remote, joyst
 ---
 ## Demo
 
- **[Watch the demo](https://drive.google.com/file/d/10ovOMTgTPvyNEI1hTew5lxxIuY9tv1ST/view?usp=sharing)**
+ **[Watch the demo](https://drive.google.com/file/d/1eFq3uY_03Utb3-AOfIYQuruc04e991p4/view?usp=sharing)**
 
 ---
 
