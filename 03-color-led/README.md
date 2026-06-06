@@ -45,38 +45,6 @@ The lamp continuously reads three photoresistors (one per color channel — R, G
 
 ---
 
-## Wiring
-
-### RGB LED
-| LED Pin | Arduino Pin |
-|---|---|
-| Red | D11 |
-| Green | D10 |
-| Blue | D9 |
-
-### Photoresistors
-| Sensor | Arduino Pin |
-|---|---|
-| Red channel LDR | A0 |
-| Green channel LDR | A1 |
-| Blue channel LDR | A2 |
-
-### Controls & Display
-| Component | Arduino Pin |
-|---|---|
-| Push Button | D12 |
-| Potentiometer | A5 |
-| LCD RS | D2 |
-| LCD EN | D3 |
-| LCD D4 | D4 |
-| LCD D5 | D5 |
-| LCD D6 | D6 |
-| LCD D7 | D7 |
-
-> Each photoresistor should be wired as a voltage divider with a pull-down resistor to GND.
-
----
-
 ## How It Works
 
 ### Live and Freeze Mode
@@ -168,6 +136,38 @@ if (millis() - lastLCD > 650) {
 | Green dominant | `Color: Green` | `Live` or `FROZEN` |
 | Blue dominant | `Color: Blue` | `Live` or `FROZEN` |
 | No dominant channel | `Balanced` | `Live` or `FROZEN` |
+
+---
+
+## Wiring
+
+### RGB LED
+| LED Pin | Arduino Pin |
+|---|---|
+| Red | D11 |
+| Green | D10 |
+| Blue | D9 |
+
+### Photoresistors
+| Sensor | Arduino Pin |
+|---|---|
+| Red channel LDR | A0 |
+| Green channel LDR | A1 |
+| Blue channel LDR | A2 |
+
+### Controls & Display
+| Component | Arduino Pin |
+|---|---|
+| Push Button | D12 |
+| Potentiometer | A5 |
+| LCD RS | D2 |
+| LCD EN | D3 |
+| LCD D4 | D4 |
+| LCD D5 | D5 |
+| LCD D6 | D6 |
+| LCD D7 | D7 |
+
+> Each photoresistor should be wired as a voltage divider with a pull-down resistor to GND.
 
 ---
 
