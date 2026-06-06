@@ -84,7 +84,7 @@ void loop() {
         Serial.println("°C");
     }
 
-    //lit off LEDs based on temp
+    //LEDs based on temp
     digitalWrite(3, tempC >= 25.0 ? HIGH : LOW);
     digitalWrite(4, tempC >= 26.0 ? HIGH : LOW);
     digitalWrite(5, tempC >= 27.0 ? HIGH : LOW);    
