@@ -3,7 +3,7 @@
 A simple reaction/timing game built on Arduino using 8 LEDs, two buttons, resistors and a breadboard. One of my earliest Arduino projects! **Note:** This code works even if you don't have physical pull up resistors for your buttons as I used **INPUT_PULLUP**. 
 
 ---
-## Demo
+
 [Watch demo](https://drive.google.com/file/d/1oEnfp7SJMVzkz9ctN1HnkqSlsQEopM4Q/view)
 
 ---
