@@ -109,7 +109,7 @@ Octave range: **3 – 6**, cycling back to 3 after 6.
 - **Resistor ladder** — Reading multiple buttons through a single analog pin using a voltage divider chain
 - **SSD1306 OLED over I2C** — Drawing text and shapes (filled triangles as arrows, circles as dots)
 - **Dual I2C devices** — Running both an LCD and an OLED on the same SDA/SCL bus using different I2C addresses
-- **`tone()` / `noTone()`** — Generating square-wave audio on a piezo buzzer with frequency control
+- **`tone()` / `noTone()`** — Generating audio on a piezo buzzer with frequency control
 - **BPM-based timing** — Converting musical note durations to milliseconds using a calculated beat duration
 
 ---
