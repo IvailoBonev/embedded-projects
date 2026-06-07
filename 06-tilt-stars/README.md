@@ -110,7 +110,7 @@ _I2C address: `0x27` — both the OLED and LCD share the SDA/SCL bus (A4/A5)._
 
 ---
 
-## 💡 Key Concepts Practiced
+## What I Learned
 
 - **OLED animation** — frame-by-frame pixel management, shooting star, star field with twinkling effect
 - **Tilt sensor input** — via time interval
