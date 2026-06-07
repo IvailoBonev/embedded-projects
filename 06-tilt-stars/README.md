@@ -6,7 +6,7 @@ An interactive Arduino Uno project that simulates a night sky — tilt a sensor 
 
 ##  Demo
 
-> _Video demo coming soon._
+[Watch the demo](https://drive.google.com/file/d/1_YVgXbMorJqptqMLCd0Ldp1mjqHadeHZ/view?usp=sharing)
 
 ---
 
