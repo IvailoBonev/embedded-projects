@@ -5,7 +5,7 @@ An Arduino Uno project that combines multiple input methods — IR remote, joyst
 ---
 ## Demo
 
- **[Watch the demo](https://drive.google.com/file/d/10ovOMTgTPvyNEI1hTew5lxxIuY9tv1ST/view?usp=sharing)**
+ **[Watch the demo](https://drive.google.com/file/d/1eFq3uY_03Utb3-AOfIYQuruc04e991p4/view?usp=sharing)**
 
 ---
 
@@ -33,7 +33,7 @@ The Smart Servo Motor Controller lets you position a servo motor using three dif
 
 | Component | Pin |
 |---|---|
-| LCD (RS, EN, D4, D5, D6, D7) | 4, 5, 6, 7, 8, 9 |
+| LCD Display | 4, 5, 6, 7, 8, 9 |
 | IR Receiver | 11 |
 | Joystick (analog) | A4 |
 | Push Button | 2 |
@@ -63,7 +63,6 @@ The Smart Servo Motor Controller lets you position a servo motor using three dif
 ### Push Button
 - **Press once** → locks the servo, displays current angle on LCD
 - **Press again** → unlocks, clears the display, restores joystick control
-- Debounced with a 300ms cooldown
 
 ### LCD Display
 - **Line 1:** `Input: [typed digits]`
