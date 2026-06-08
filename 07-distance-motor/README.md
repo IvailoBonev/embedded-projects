@@ -106,14 +106,14 @@ bool risingEdge(int pin, bool &lastState, unsigned long &lastTime) {
 }
 ```
 
-```
+---
 OLED layout
 
 ![OLED image](content/photo_1_display.jpg)
 
 When the danger condition is active, !! STOP !! appears on the bottom row.
 
-```
+---
 
 ## Key Concepts Learned
 
