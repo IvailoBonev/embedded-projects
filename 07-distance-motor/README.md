@@ -111,7 +111,7 @@ bool risingEdge(int pin, bool &lastState, unsigned long &lastTime) {
 
 <img src="content/photo_1_display.jpg" width="300" alt="OLED photo">
 
-When the danger condition is active, <span style="color:cyan">!! STOP !!</span> appears on the bottom row.
+When the danger condition is active, **!! STOP !!** appears on the bottom row.
 
 ---
 
