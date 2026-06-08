@@ -6,7 +6,7 @@ An interactive Arduino Uno project that simulates a night sky — tilt a sensor 
 
 ##  Demo
 
-> _Video demo coming soon._
+[Watch the demo](https://drive.google.com/file/d/1_YVgXbMorJqptqMLCd0Ldp1mjqHadeHZ/view?usp=sharing)
 
 ---
 
@@ -110,7 +110,7 @@ _I2C address: `0x27` — both the OLED and LCD share the SDA/SCL bus (A4/A5)._
 
 ---
 
-## 💡 Key Concepts Practiced
+## What I Learned
 
 - **OLED animation** — frame-by-frame pixel management, shooting star, star field with twinkling effect
 - **Tilt sensor input** — via time interval
