@@ -172,13 +172,13 @@ const char* password = "YOUR_PASSWORD";
 
 ## Key Concepts Learned
 
-**PWM on ESP32**
+**PWM on ESP32**: 
 Unlike Arduinos where `analogWrite()` handles everything, the ESP32 requires explicit setup of PWM channels using `ledcSetup()`, `ledcAttachPin()`, and `ledcWrite()`. Multiple independent channels can run at different frequencies and resolutions simultaneously.
 
-**Running a web server on a microcontroller**
+**Running a web server on a microcontroller**: 
 The ESP32 can act as a full HTTP server on the local network. Routes are registered with callback functions, query parameters are parsed from the URL, and files can be streamed directly from flash storage.
 
-**SPIFFS for separating firmware from web content**
+**SPIFFS for separating firmware from web content**: 
 Storing the UI files in the flash file system rather than hard-coding them as strings keeps the project organized. The file system image is uploaded as a separate step from the sketch itself.
 
 ---
