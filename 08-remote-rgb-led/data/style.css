@@ -1,0 +1,107 @@
+@import url("https://fonts.googleapis.com/css2?family=Exo+2:ital,wght@0,100..900;1,100..900&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Noto+Sans:ital,wght@0,100..900;1,100..900&family=Rethink+Sans:ital,wght@0,400..800;1,400..800&display=swap");
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: sans-serif;
+  background: #1a1a2e;
+  color: white;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  font-family: "Montserrat", sans-serif;
+}
+
+h1 {
+  margin-bottom: 32px;
+  font-size: 24px;
+  letter-spacing: 2px;
+}
+
+.card {
+  background: #16213e;
+  border-radius: 16px;
+  padding: 32px;
+  width: 320px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.4);
+}
+
+#preview {
+  width: 100%;
+  height: 80px;
+  border-radius: 10px;
+  background: rgb(0, 50, 255);
+  margin-bottom: 24px;
+  transition: background 0.3s;
+}
+
+.slider-row {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 16px;
+}
+
+.slider-row label {
+  width: 14px;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.r-label {
+  color: #f87171;
+}
+.g-label {
+  color: #4ade80;
+}
+.b-label {
+  color: #60a5fa;
+}
+
+input[type="range"] {
+  flex: 1;
+  height: 6px;
+  border-radius: 3px;
+  outline: none;
+  border: none;
+  cursor: pointer;
+}
+
+#rSlider {
+  accent-color: #f87171;
+}
+#gSlider {
+  accent-color: #4ade80;
+}
+#bSlider {
+  accent-color: #60a5fa;
+}
+
+.val {
+  width: 32px;
+  text-align: right;
+  font-size: 13px;
+  color: #aaa;
+}
+
+button {
+  width: 100%;
+  margin-top: 8px;
+  padding: 14px;
+  background: #4762d8;
+  color: white;
+  border: none;
+  border-radius: 10px;
+  font-size: 16px;
+  cursor: pointer;
+  transition: opacity 0.2s;
+}
+
+button:active {
+  opacity: 0.8;
+}
