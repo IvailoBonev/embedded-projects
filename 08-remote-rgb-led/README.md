@@ -59,8 +59,6 @@ Three routes are registered:
 | `GET /style.css` | `handleCSS()` | Serves the stylesheet |
 | `GET /script.js` | `handleJS()` | Serves the JavaScript file |
 
-The server must be polled continuously — `server.handleClient()` is called on every iteration of `loop()` so it can detect and respond to incoming connections without missing any.
-
 ### 3. Serving Files from SPIFFS
 
 Instead of embedding the HTML/CSS/JS as raw strings inside the C++ code (which would be messy and hard to edit), the web files are stored in **SPIFFS** — the Serial Peripheral Interface Flash File System. This is a small file system that lives in a dedicated partition of the ESP32's onboard flash memory.
