@@ -382,7 +382,7 @@ qPush(serialised JSON) ───────────────────
 | `drawTail`            | Next read position in the ring                         |
 | `drawCount`           | Number of entries currently in the buffer              |
 
-**Overflow behaviour:** When `drawCount >= DRAW_QUEUE_CAPACITY`, `qPush` advances `drawTail` before writing, silently dropping the oldest command. This produces an occasional gap in a stroke during very heavy concurrent use — preferable to blocking the network task (which would cause disconnections) or using dynamic memory (fragmentation risk on a microcontroller).
+**Overflow behaviour:** When `drawCount >= DRAW_QUEUE_CAPACITY`, `qPush` advances `drawTail` before writing, dropping the oldest command.
 
 **Capacity reasoning:** At ~100 Hz loop speed, the ESP32 renders ~100 commands/second. With 6 users each flushing every 15 points, peak input is ~40–60 commands/second — well within the buffer's capacity under normal use.
 
