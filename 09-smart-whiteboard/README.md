@@ -275,7 +275,7 @@ The single-page app shell. It renders two top-level states: the `#join-screen` (
 
 ### 7.2 `data/ws.js`
 
-Manages the WebSocket connection lifecycle. `connect(name)` opens a socket, sends the `join` message on open, and auto-reconnects after 3 seconds on close. `send(obj)` serialises to JSON and does not do anything silently if the socket isn't open. `on(type, fn)` registers message handlers by message type, called by `main.js` to wire up all incoming events.
+Manages the WebSocket connection lifecycle. `connect(name)` opens a socket, sends the `join` message on open, and auto-reconnects after 3 seconds on close. `send(obj)` serialises to JSON and transmits it; if the socket isn't open, the call does nothing. `on(type, fn)` registers message handlers by message type, called by `main.js` to wire up all incoming events.
 
 ---
 
