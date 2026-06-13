@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"
+    />
+    <title>DrawBoard</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap"
+    />
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <div id="join-screen">
+      <div class="mc-panel join-panel">
+        <div class="mc-panel-title">DrawBoard</div>
+        <p class="mc-subtitle">multiplayer drawing — made by Ivailo</p>
+
+        <div class="mc-field-wrap">
+          <label class="mc-label" for="join-name">Enter your name</label>
+          <input
+            class="mc-input"
+            id="join-name"
+            type="text"
+            maxlength="16"
+            placeholder="Ivailo"
+            autocomplete="off"
+          />
+        </div>
+
+        <button class="mc-btn mc-btn--green" id="join-btn">
+          [ Join Session ]
+        </button>
+        <div class="mc-error" id="join-error"></div>
+      </div>
+    </div>
+
+    <div id="app" class="hidden">
+      <div id="toolbar">
+        <div class="tb-group">
+          <button class="mc-tool active" data-tool="pen" title="Pen">
+            &#x270F;
+          </button>
+          <button class="mc-tool" data-tool="eraser" title="Eraser">
+            &#x25A3;
+          </button>
+          <button class="mc-tool" data-tool="shape" title="Shapes">
+            &#x25FB;
+          </button>
+          <button class="mc-tool" data-tool="text" title="Text">T</button>
+          <select class="mc-select hidden" id="shape-select">
+            <option value="rect">Rect</option>
+            <option value="circle">Circle</option>
+            <option value="line">Line</option>
+          </select>
+        </div>
+
+        <div class="tb-group tb-group--center">
+          <div id="color-swatches">
+            <div
+              class="mc-swatch active"
+              style="--c: #e74c3c"
+              data-hex="#E74C3C"
+            ></div>
+            <div
+              class="mc-swatch"
+              style="--c: #3498db"
+              data-hex="#3498DB"
+            ></div>
+            <div
+              class="mc-swatch"
+              style="--c: #2ecc71"
+              data-hex="#2ECC71"
+            ></div>
+            <div
+              class="mc-swatch"
+              style="--c: #f1c40f"
+              data-hex="#F1C40F"
+            ></div>
+            <div
+              class="mc-swatch"
+              style="--c: #9b59b6"
+              data-hex="#9B59B6"
+            ></div>
+            <div
+              class="mc-swatch"
+              style="--c: #e67e22"
+              data-hex="#E67E22"
+            ></div>
+            <div
+              class="mc-swatch"
+              style="--c: #111111"
+              data-hex="#111111"
+            ></div>
+            <div
+              class="mc-swatch"
+              style="--c: #eeeeee"
+              data-hex="#EEEEEE"
+            ></div>
+            <input
+              type="color"
+              class="mc-colorpicker"
+              id="custom-color"
+              value="#E74C3C"
+            />
+          </div>
+          <div id="size-row">
+            <span class="mc-label-sm">SIZE</span>
+            <input
+              type="range"
+              class="mc-slider"
+              id="size-slider"
+              min="1"
+              max="20"
+              value="4"
+              step="1"
+            />
+            <span class="mc-size-val" id="size-val">04</span>
+            <div class="mc-size-dot" id="size-dot"></div>
+          </div>
+        </div>
+
+        <div class="tb-group tb-group--right">
+          <button class="mc-btn mc-btn--green" id="export-btn">PNG</button>
+          <button class="mc-btn mc-btn--red" id="clear-btn">CLR</button>
+          <div class="mc-conn" id="conn-indicator">
+            <div class="mc-conn-dot" id="conn-dot"></div>
+            <span class="mc-conn-label" id="conn-label">offline</span>
+          </div>
+          <button class="mc-btn mc-btn--stone mc-mobile-only" id="menu-btn">
+            &#x2630;
+          </button>
+        </div>
+      </div>
+
+      <div id="body-wrap">
+        <aside id="sidebar">
+          <div class="sidebar-inner mc-panel">
+            <div class="sidebar-section">
+              <div class="sidebar-heading">[ Players ]</div>
+              <div id="users-list"></div>
+            </div>
+
+            <div class="sidebar-section sidebar-section--chat">
+              <div class="sidebar-heading">[ Chat ]</div>
+              <div id="chat-messages"></div>
+              <div id="chat-input-row">
+                <input
+                  class="mc-input mc-input--sm"
+                  id="chat-input"
+                  placeholder="say something..."
+                  maxlength="120"
+                />
+                <button
+                  class="mc-btn mc-btn--green mc-btn--icon"
+                  id="chat-send"
+                >
+                  ▶
+                </button>
+              </div>
+            </div>
+          </div>
+        </aside>
+
+        <div id="canvas-wrap">
+          <canvas id="canvas"></canvas>
+          <div id="cursor-layer"></div>
+          <input
+            id="text-overlay"
+            class="mc-text-overlay hidden"
+            type="text"
+            placeholder="type then Enter"
+            autocomplete="off"
+            spellcheck="false"
+          />
+        </div>
+      </div>
+    </div>
+
+    <script type="module" src="main.js"></script>
+  </body>
+</html>

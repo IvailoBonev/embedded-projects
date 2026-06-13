@@ -1,0 +1,146 @@
+<svg width="100%" viewBox="0 0 680 700" xmlns="http://www.w3.org/2000/svg" role="img">
+  <title>ESP32 boot-side to ILI9488 14-pin wiring, no shared pins</title>
+  <desc>Complete pin mapping from ESP32 DOIT DevKit V1 boot side to 14-pin ILI9488 touch display.</desc>
+  <defs>
+    <marker id="arrow" viewBox="0 0 10 10" refX="8" refY="5" markerWidth="6" markerHeight="6" orient="auto-start-reverse">
+      <path d="M2 1L8 5L2 9" fill="none" stroke="context-stroke" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+    </marker>
+    <style>
+      text { font-family: sans-serif; fill: #1a1a1a; }
+      .label-sm { font-size: 11px; }
+      .label-md { font-size: 13px; font-weight: 600; }
+      .label-hd { font-size: 13px; font-weight: 700; fill: #444; }
+      .muted { fill: #888; font-size: 11px; }
+    </style>
+  </defs>
+
+  <rect width="680" height="700" fill="#fafafa"/>
+
+  <!-- Header -->
+  <text x="155" y="28" text-anchor="middle" class="label-hd">ESP32 boot side</text>
+  <text x="525" y="28" text-anchor="middle" class="label-hd">Display pin</text>
+  <line x1="30" y1="36" x2="650" y2="36" stroke="#ccc" stroke-width="0.8"/>
+
+  <!-- POWER -->
+  <!-- 3.3V -> VDD -->
+  <rect x="30" y="44" width="200" height="34" rx="6" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.8"/>
+  <text x="90" y="65" text-anchor="middle" class="label-md" fill="#085041">3.3V</text>
+  <text x="200" y="65" text-anchor="end" class="muted">power</text>
+  <line x1="232" y1="61" x2="418" y2="61" stroke="#0f6e56" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <rect x="420" y="44" width="200" height="34" rx="6" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.8"/>
+  <text x="520" y="65" text-anchor="middle" class="label-md" fill="#085041">VDD</text>
+
+  <!-- GND -> GND -->
+  <rect x="30" y="84" width="200" height="34" rx="6" fill="#f1efe8" stroke="#5f5e5a" stroke-width="0.8"/>
+  <text x="90" y="105" text-anchor="middle" class="label-md" fill="#2c2c2a">GND</text>
+  <text x="200" y="105" text-anchor="end" class="muted">ground</text>
+  <line x1="232" y1="101" x2="418" y2="101" stroke="#5f5e5a" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <rect x="420" y="84" width="200" height="34" rx="6" fill="#f1efe8" stroke="#5f5e5a" stroke-width="0.8"/>
+  <text x="520" y="105" text-anchor="middle" class="label-md" fill="#2c2c2a">GND</text>
+
+  <!-- section label -->
+  <text x="340" y="134" text-anchor="middle" class="muted">— display SPI —</text>
+
+  <!-- GPIO 13 -> SCK -->
+  <rect x="30" y="140" width="200" height="34" rx="6" fill="#eeedfe" stroke="#534ab7" stroke-width="0.8"/>
+  <text x="90" y="161" text-anchor="middle" class="label-md" fill="#3c3489">GPIO 13</text>
+  <text x="200" y="161" text-anchor="end" class="muted">SPI clock</text>
+  <line x1="232" y1="157" x2="418" y2="157" stroke="#534ab7" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="420" y="140" width="200" height="34" rx="6" fill="#eeedfe" stroke="#534ab7" stroke-width="0.8"/>
+  <text x="520" y="161" text-anchor="middle" class="label-md" fill="#3c3489">SCK</text>
+
+  <!-- GPIO 14 -> SDI -->
+  <rect x="30" y="180" width="200" height="34" rx="6" fill="#eeedfe" stroke="#534ab7" stroke-width="0.8"/>
+  <text x="90" y="201" text-anchor="middle" class="label-md" fill="#3c3489">GPIO 14</text>
+  <text x="200" y="201" text-anchor="end" class="muted">SPI MOSI</text>
+  <line x1="232" y1="197" x2="418" y2="197" stroke="#534ab7" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="420" y="180" width="200" height="34" rx="6" fill="#eeedfe" stroke="#534ab7" stroke-width="0.8"/>
+  <text x="520" y="201" text-anchor="middle" class="label-md" fill="#3c3489">SDI</text>
+
+  <!-- SDO note (not connected) -->
+  <rect x="420" y="220" width="200" height="34" rx="6" fill="#f1efe8" stroke="#b4b2a9" stroke-width="0.8"/>
+  <text x="520" y="241" text-anchor="middle" class="label-md" fill="#888">SDO — n/c</text>
+  <text x="205" y="241" text-anchor="end" class="muted">not used (display is write-only)</text>
+
+  <!-- section label -->
+  <text x="340" y="270" text-anchor="middle" class="muted">— display control —</text>
+
+  <!-- GPIO 26 -> CS -->
+  <rect x="30" y="276" width="200" height="34" rx="6" fill="#faece7" stroke="#993c1d" stroke-width="0.8"/>
+  <text x="90" y="297" text-anchor="middle" class="label-md" fill="#712b13">GPIO 26</text>
+  <text x="200" y="297" text-anchor="end" class="muted">chip select</text>
+  <line x1="232" y1="293" x2="418" y2="293" stroke="#993c1d" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="420" y="276" width="200" height="34" rx="6" fill="#faece7" stroke="#993c1d" stroke-width="0.8"/>
+  <text x="520" y="297" text-anchor="middle" class="label-md" fill="#712b13">CS</text>
+
+  <!-- GPIO 25 -> RST -->
+  <rect x="30" y="316" width="200" height="34" rx="6" fill="#faece7" stroke="#993c1d" stroke-width="0.8"/>
+  <text x="90" y="337" text-anchor="middle" class="label-md" fill="#712b13">GPIO 25</text>
+  <text x="200" y="337" text-anchor="end" class="muted">reset</text>
+  <line x1="232" y1="333" x2="418" y2="333" stroke="#993c1d" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="420" y="316" width="200" height="34" rx="6" fill="#faece7" stroke="#993c1d" stroke-width="0.8"/>
+  <text x="520" y="337" text-anchor="middle" class="label-md" fill="#712b13">RST</text>
+
+  <!-- GPIO 33 -> D/C -->
+  <rect x="30" y="356" width="200" height="34" rx="6" fill="#faece7" stroke="#993c1d" stroke-width="0.8"/>
+  <text x="90" y="377" text-anchor="middle" class="label-md" fill="#712b13">GPIO 33</text>
+  <text x="200" y="377" text-anchor="end" class="muted">data / cmd</text>
+  <line x1="232" y1="373" x2="418" y2="373" stroke="#993c1d" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="420" y="356" width="200" height="34" rx="6" fill="#faece7" stroke="#993c1d" stroke-width="0.8"/>
+  <text x="520" y="377" text-anchor="middle" class="label-md" fill="#712b13">D/C</text>
+
+  <!-- BL -> 3.3V direct -->
+  <rect x="30" y="396" width="200" height="34" rx="6" fill="#e1f5ee" stroke="#0f6e56" stroke-width="0.8"/>
+  <text x="90" y="417" text-anchor="middle" class="label-md" fill="#085041">3.3V rail</text>
+  <text x="200" y="417" text-anchor="end" class="muted">always-on BL</text>
+  <line x1="232" y1="413" x2="418" y2="413" stroke="#0f6e56" stroke-width="1.2" marker-end="url(#arrow)"/>
+  <rect x="420" y="396" width="200" height="34" rx="6" fill="#eaf3de" stroke="#3b6d11" stroke-width="0.8"/>
+  <text x="520" y="417" text-anchor="middle" class="label-md" fill="#27500a">BL</text>
+
+  <!-- section label -->
+  <text x="340" y="446" text-anchor="middle" class="muted">— touch SPI (dedicated, no sharing) —</text>
+
+  <!-- GPIO 32 -> TCK -->
+  <rect x="30" y="452" width="200" height="34" rx="6" fill="#e6f1fb" stroke="#185fa5" stroke-width="0.8"/>
+  <text x="90" y="473" text-anchor="middle" class="label-md" fill="#0c447c">GPIO 32</text>
+  <text x="200" y="473" text-anchor="end" class="muted">touch clock</text>
+  <line x1="232" y1="469" x2="418" y2="469" stroke="#185fa5" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="420" y="452" width="200" height="34" rx="6" fill="#e6f1fb" stroke="#185fa5" stroke-width="0.8"/>
+  <text x="520" y="473" text-anchor="middle" class="label-md" fill="#0c447c">TCK</text>
+
+  <!-- GPIO 21 -> TDI -->
+  <rect x="30" y="492" width="200" height="34" rx="6" fill="#e6f1fb" stroke="#185fa5" stroke-width="0.8"/>
+  <text x="90" y="513" text-anchor="middle" class="label-md" fill="#0c447c">GPIO 21</text>
+  <text x="200" y="513" text-anchor="end" class="muted">touch MOSI</text>
+  <line x1="232" y1="509" x2="418" y2="509" stroke="#185fa5" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="420" y="492" width="200" height="34" rx="6" fill="#e6f1fb" stroke="#185fa5" stroke-width="0.8"/>
+  <text x="520" y="513" text-anchor="middle" class="label-md" fill="#0c447c">TDI</text>
+
+  <!-- GPIO 27 -> TCS -->
+  <rect x="30" y="532" width="200" height="34" rx="6" fill="#faeeda" stroke="#854f0b" stroke-width="0.8"/>
+  <text x="90" y="553" text-anchor="middle" class="label-md" fill="#633806">GPIO 27</text>
+  <text x="200" y="553" text-anchor="end" class="muted">touch CS</text>
+  <line x1="232" y1="549" x2="418" y2="549" stroke="#854f0b" stroke-width="1.5" marker-end="url(#arrow)"/>
+  <rect x="420" y="532" width="200" height="34" rx="6" fill="#faeeda" stroke="#854f0b" stroke-width="0.8"/>
+  <text x="520" y="553" text-anchor="middle" class="label-md" fill="#633806">TCS</text>
+
+  <!-- GPIO 35 -> TDO (input only) -->
+  <rect x="30" y="572" width="200" height="34" rx="6" fill="#e6f1fb" stroke="#185fa5" stroke-width="0.8"/>
+  <text x="90" y="593" text-anchor="middle" class="label-md" fill="#0c447c">GPIO 35 ⬅</text>
+  <text x="200" y="593" text-anchor="end" class="muted">touch MISO</text>
+  <line x1="232" y1="589" x2="418" y2="589" stroke="#185fa5" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+  <rect x="420" y="572" width="200" height="34" rx="6" fill="#e6f1fb" stroke="#185fa5" stroke-width="0.8"/>
+  <text x="520" y="593" text-anchor="middle" class="label-md" fill="#0c447c">TDO</text>
+
+  <!-- GPIO 34 -> PEN (input only) -->
+  <rect x="30" y="612" width="200" height="34" rx="6" fill="#fbeaf0" stroke="#993556" stroke-width="0.8"/>
+  <text x="90" y="633" text-anchor="middle" class="label-md" fill="#72243e">GPIO 34 ⬅</text>
+  <text x="200" y="633" text-anchor="end" class="muted">touch IRQ</text>
+  <line x1="232" y1="629" x2="418" y2="629" stroke="#993556" stroke-width="1.2" stroke-dasharray="4 3" marker-end="url(#arrow)"/>
+  <rect x="420" y="612" width="200" height="34" rx="6" fill="#fbeaf0" stroke="#993556" stroke-width="0.8"/>
+  <text x="520" y="633" text-anchor="middle" class="label-md" fill="#72243e">PEN</text>
+
+  <!-- Footer notes -->
+  <rect x="30" y="654" width="620" height="20" rx="6" fill="#fff8e1" stroke="#f0a000" stroke-width="0.7"/>
+  <text x="340" y="669" text-anchor="middle" class="muted" fill="#7a5000">⬅ = input-only pin (GPIO 34/35 cannot output) — fine for MISO and IRQ</text>
+</svg>
